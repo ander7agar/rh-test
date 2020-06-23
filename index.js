@@ -16,7 +16,10 @@ async function api(){
             appTitle: "My API",
             mongo: {
                 URI: process.env.MONGODB_URI
-            }
+            },
+            enableMongooseRunValidators: true,
+            enablePayloadValidation: true,
+            enableResponseFail: true
         };
 
         await server.register({

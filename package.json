@@ -1,0 +1,15 @@
+{
+  "name": "rh-test",
+  "version": "1.0.0",
+  "description": "Rest-Hapi Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "rest-hapi": "^2.1.1"
+  }
+}

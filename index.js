@@ -18,8 +18,8 @@ async function api(){
                 URI: process.env.MONGODB_URI
             },
             enableMongooseRunValidators: true,
-            enableQueryValidation: true,
-            enableResponseFail: false
+            enablePayloadValidation: true,
+            enableResponseFail: true
         };
 
         await server.register({

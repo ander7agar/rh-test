@@ -10,13 +10,16 @@ async function api(){
     let port = process.env.SERVER_PORT || 8080;
 
     try {
-        let server = Hapi.Server({ port: port });
+        let server = Hapi.Server({ host: '0.0.0.0', port: port });
 
         let config = {
-            appTitle: "My API",
+            appTitle: "Test API",
             mongo: {
                 URI: process.env.MONGODB_URI
-            }
+            },
+            enableMongooseRunValidators: true,
+            enableQueryValidation: true,
+            enableResponseFail: false
         };
 
         await server.register({

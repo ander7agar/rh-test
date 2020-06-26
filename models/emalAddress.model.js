@@ -1,6 +1,9 @@
+
 module.exports = function (mongoose) {
+    let Types = mongoose.Schema.Types;
+
     let schema = mongoose.Schema({
-        address: { type: String },
+        address: { type: Types.String },
     });
 
     schema.statics = {
